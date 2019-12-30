@@ -12,7 +12,7 @@ export class Login extends Component {
     constructor(){
         super()
         this.state={
-            username: '',
+            email: '',
             password: '',
             role: '',
             token: ''
@@ -21,7 +21,7 @@ export class Login extends Component {
     login = e => {
         e.preventDefault();
         const data = {
-            username: this.state.username,
+            email: this.state.email,
             password: this.state.password,
             role: this.state.role
         }
@@ -32,7 +32,7 @@ export class Login extends Component {
             if(res.status === 200){
                 this.setState({
                 message: 'Login success',
-                token: res.data.token
+                token: res.data.token,
             })
             console.log(this.state)
             alert('Login success')
@@ -54,7 +54,7 @@ export class Login extends Component {
     }
     componentDidUpdate = () => {
         if(this.state.message === "Login success"){
-            localStorage.setItem('username :', this.state.username);
+            localStorage.setItem('email :', this.state.email);
             localStorage.setItem('token :', this.state.token);
             localStorage.setItem('role :', this.state.role)
                 this.props.history.push ('/home')
@@ -86,9 +86,9 @@ export class Login extends Component {
                     <div className='form'>
                     <Form>
                         <Form.Group controlId="formBasicEmail">
-                        <Form.Label className='inputUsername'>Username</Form.Label>
-                        <Form.Control type="text" placeholder="Enter username"
-                        onChange={ (e) => {this.setState({username:e.target.value})
+                        <Form.Label className='inputUsername'>Email</Form.Label>
+                        <Form.Control type="text" placeholder="Enter your email"
+                        onChange={ (e) => {this.setState({email:e.target.value})
                         console.log(e.target.value)}}/>
                         </Form.Group>
                         <Form.Group controlId="formBasicPassword">

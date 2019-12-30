@@ -12,7 +12,8 @@ class Register extends Component {
     constructor(){
         super()
         this.state={
-            username: '',
+            name: '',
+            email: '',
             password: '',
             role: ''
         }
@@ -20,8 +21,8 @@ class Register extends Component {
     register = e => {
         e.preventDefault();
         const data = {
-            Name: this.state.Name,
-            username: this.state.username,
+            name: this.state.name,
+            email: this.state.email,
             password: this.state.password,
             role: this.state.role,
         }
@@ -58,9 +59,6 @@ class Register extends Component {
     };
 
     render() {// const {username, password, role, name} = this.state
-
-
-
         return (
         <Grid container>
             <Grid item xs={12} sm={7}>
@@ -85,15 +83,15 @@ class Register extends Component {
                 </p>
                 <div className='form'>
                     <Form>
-                    <Form.Group> 
-                        <Form.Label className='label-name'>Name</Form.Label>
-                        <Form.Control type="text" placeholder="Enter full name"
-                        onChange={ (e) => {this.setState({Name:e.target.value})
+                    <Form.Group>
+                        <Form.Label className='label-username'>Full Name</Form.Label>
+                        <Form.Control type="text" placeholder="Enter your Name"
+                        onChange={ (e) => {this.setState({name:e.target.value})
                                             console.log(e.target.value)}}/>
                             <br/>
-                        <Form.Label className='label-username'>Username</Form.Label>
-                        <Form.Control type="text" placeholder="Enter username"
-                        onChange={ (e) => {this.setState({username:e.target.value})
+                        <Form.Label className='label-username'>Email</Form.Label>
+                        <Form.Control type="text" placeholder="Enter your Email"
+                        onChange={ (e) => {this.setState({email:e.target.value})
                                             console.log(e.target.value)}}/>
                             <br/>
                         <Form.Label className='label-password'>Password</Form.Label>

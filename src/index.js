@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
-import Home from './Components/Home/Home.jsx';
+//import Card from './Components/Card/Card.jsx'
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ const AppRoute = () => {
             <Route path='/' exact component={App}/>
             <Route path='/login' component={Login}/>
             <Route path='/register' component={Register}/>
-            <Route path='/home' component={Home}/>
+            {/* <Route path='/home' component={Card}/> */}
         </Router>
     );
 }
