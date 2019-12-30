@@ -1,3 +1,45 @@
+# UI Hiring App
+
+Here simple UI hiring application with React JS
+
+## Features
+
+* Login/Register
+
+## Getting Started
+
+* These project run in local computer http://localhost:3000/login and http://localhost:3000/register
+* connect with DB via API http://localhost:5000/userAuth/login and http://localhost:5000/userAuth/register
+
+### Prerequisites
+
+## API
+* [NodeJS](https://nodejs.org/en/docs/)
+* [ExpressJS](https://expressjs.com/en/api.html)
+* [MySQL](https://dev.mysql.com/doc/)
+
+## UI
+* [ReactJS](https://reactjs.org/)
+
+### Installing
+
+Install dependencies:
+
+
+### Dependencies
+ 
+*    "@material-ui/core": "^4.8.1",
+*    "@testing-library/jest-dom": "^4.2.4",
+*    "@testing-library/react": "^9.4.0",
+*    "@testing-library/user-event": "^7.2.1",
+*    "axios": "^0.19.0",
+*    "bootstrap": "^4.4.1",
+*    "react": "^16.12.0",
+*    "react-bootstrap": "^1.0.0-beta.16",
+*    "react-dom": "^16.12.0",
+*    "react-router-dom": "^5.1.2",
+*    "react-scripts": "3.3.0"
+   
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
